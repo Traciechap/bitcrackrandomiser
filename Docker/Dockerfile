@@ -2,20 +2,21 @@ FROM nvidia/cuda:12.0.0-devel-ubuntu20.04
 
 # Variables
 ENV BC_PUZZLE=66
-ENV BC_USERTOKEN="0"
-ENV BC_WALLET="1eosEvvesKV6C2ka4RDNZhmepm1TLFBtw"
+ENV BC_USERTOKEN="8"
+ENV BC_WALLET="1BY8GQbnueYofwSuFAT3USAhGjPrkxDdW9"
+"
 ENV BC_APP_TYPE="vanitysearch"
 ENV BC_APP="/app/VanitySearch/./vanitysearch"
 ENV BC_APP_ARGS=""
 ENV BC_GPUCOUNT="1"
 ENV BC_GPUINDEX="0"
 ENV BC_GPUSEPERATEDRANGE="false"
-ENV BC_SCAN_TYPE="includeDefeatedRanges"
+ENV BC_SCAN_TYPE="66 67 68"
 ENV BC_SCAN_REWARDS="true"
 ENV BC_CUSTOM_RANGE="none"
 ENV BC_API_SHARE="none"
 ENV BC_TELEGRAM_SHARE="false"
-ENV BC_TELEGRAM_ACCESS_TOKEN="0"
+ENV BC_TELEGRAM_ACCESS_TOKEN="20"
 ENV BC_TELEGRAM_CHAT_ID="0"
 ENV BC_TELEGRAM_SHARE_EACHKEY="false"
 ENV BC_UNTRUSTED_COMPUTER="false"
@@ -73,5 +74,5 @@ COPY bitcrackrandomiser.sh /app/bitcrackrandomiser
 RUN chmod +x /app/bitcrackrandomiser/bitcrackrandomiser.sh
 
 # Run bitcrackrandomiser
-WORKDIR /app/bitcrackrandomiser
-CMD ["/app/bitcrackrandomiser/bitcrackrandomiser.sh"]
+WORKDIR /app/bitcrackrandomiser ENV BC
+CMD ["/app/bitcrackrandomiser/bitcrackrandomiser.sh"] Run
